@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <script type="text/javascript" src="index.js"  async></script>
+
+    <script type="text/javascript" src="..\liquid\liquid.js"  async></script>
+    <script type="text/javascript" src="..\design\design.js"  async></script>
+    
+    
+</head>
+<body>
+    <div class="protocol_design">
+
+        <div class="bar">
+
+            <div id="filebox" class="navbox">
+                <a href="..\index\index.html" >
+                    <image src="../image/file.svg" width="40" height="40" class="picture">
+                        <span>file</span>
+                </a>
+            </div>
+    
+            <div id="liquidbox" class="navbox">
+                <a href="..\liquid\liquid.html">
+                    <image src="../image/liquid.svg" width="40" height="40" class="picture">
+    
+                    <span>liquid</span> 
+                </a>
+               
+            </div>
+    
+            <div id="designbox" class="navbox">
+                <a href="..\design\design.html">
+                    <image src="../image/design.svg" width="40" height="40" class="picture">
+                    <span>design</span>
+                </a>
+                
+            </div>
+    
+            <div class="justForType"></div>
+    
+            <div id="helpbox" class="navbox">
+                <image src="../image/help.svg" width="40" height="40" class="picture">
+    
+                    <span>help</span>
+            </div>
+    
+            <div id="settingbox" class="navbox">
+                <image src="../image/setting.svg" width="40" height="40" class="picture">
+                    <span>setting</span>
+            </div>
+        </div>
+    
+    
+        <!-- 中间部分，对应navbar部分的切换，下段代码实现的在file选项时的页面效果 -->
+        <div class="sidepanel">
+            <div class="sidepanel_titlebar">
+                <h2 class="sidepanel_title">Protocol File</h2>
+            </div>
+            <div class="sidepanel_content">
+                <div class="filesidebar">
+                    <button type="button" class="filesidebar_button" id="openButton1">CREATE NEW</button>
+                    <button type="button" class="filesidebar_button">IMPORT</button>
+                    <div class="export">
+                        <button type="button" disabled class="filesidebar_button"
+                            style="background-color:#9e9e9e;border:none">EXPORT</button>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+
+
+         <!-- 右侧部分，该部分有三个页面，initial页面，选择移液枪页面，移液枪详情页 -->
+        <!-- initial 页面 -->
+        <div id="fileIni">
+            <!-- 右侧部分之标题部分 -->
+            <header class="header_right">
+                <div class="header_wrapper">
+                    <div class="header_title">PROTOCOL DESIGN</div>
+                    <div class="header_subtitle">BETA</div>
+                </div>
+            </header>
+            <div style="background:white"></div>
+        </div>
+
+        <!-- 页面2，选择移液枪型号 -->
+        <div id="windowBackground2">
+            <!-- form包含四个部分，分别是create标题，设置移液信息的盒子，做排版的空白盒子，取消和保存的盒子 -->
+            <header class="header_right">
+                <div class="header_title">FILE DETAILS</div>
+            </header>
+            <form class="form">
+                <!-- create new protocol 的盒子 -->
+                <div class="form_header">
+                    <h2 class="form_header_title">Create New Protocol </h2>
+                    <div>
+                        <div class="forms_name">Name:</div>
+                        <div clas="forms_untitled">
+                            <input type="text"  placeholder="Untitled" >
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 选择移液枪型号的盒子 -->
+                <div>
+                    <h2 class="form_header_setup">Pipette & Tip Setup</h2>
+                    <!-- 左侧移液设备的设置，分别是pipette和tiprack -->
+                    <div class="pipettesetup">
+                        <div class="pipettesetup_left">
+                            <!-- 设置左侧pipette -->
+                            <div class="left_pipette">
+                                <label for="nums" class="left">Left Pipette:</label>
+                                <!-- 移液枪型号设置 -->
+                                <div class="left_select">
+                                    <select name="pipette"  id="nums" style="padding:2px 50px 2px 5px;margin-bottom:8px">
+                                        <option id="one" value="P20">P20</option>
+                                        <option id="two" value="P300">P300</option>
+                                        <option id="three"value="P1000">P1000</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- 设置左侧tiprack -->
+                            <div class="left_tiprack">
+                                <div class="left" for="numsT">Left Tiprack:</div>
+                                <!-- tiprack型号设置 -->
+                                <div class="left_input">
+                                    <select name="pipette" id="numsT" style="padding:2px 50px 2px 5px;">
+                                        <option value="none">None</option>
+                                        <option value="P20">P20</option>
+                                        <option value="P300">P300</option>
+                                        <option value="P1000">P1000</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 空白区域，通过设置内外边距加入一个空白盒子，用来排版。之后替换为更好的排版方式 -->
+                <div style="padding:80px;margin:80px;"></div>
+
+                <!-- 下方取消和保存按钮的盒子 -->
+                <div class="module_button_row">
+                    <!-- 这是第一个关闭按钮 -->
+                    <!-- cancel是关闭第一个弹窗的按钮 -->
+                    <button type="button" class="module_button_row_under" id="closeButton1">CANCEL</button>
+                    <!-- save是触发第二个页面的按钮 -->
+                    <button type="button" class="module_button_row_under" id="openButton2">SAVE</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- 页面3，移液枪详情页 -->
+        <div id="windowBackground3">
+
+            <header class="header_right">
+                <div class="header_title">FILE DETAILS</div>
+            </header>
+
+            <!-- 除去title之外的部分，一个大盒子，盒子内包括四个小盒子，分别是information，pipette的产品图，module产品图，continue按钮 -->
+            <div class="pageBottom">
+                <!--information 的盒子,包括information，date,protocol name ,描述，更新按钮 -->
+                <div class="information">
+                    <form>
+                        <div class="form_header">
+                            <h2 class="form_header_title">Information </h2>
+                        </div>
+                        <div class="information_input">
+                            <div>
+                                <div class="date_create">
+                                    <P class="forms_name">Date created:</P>
+                                    <!-- 这里的时间是需要跟着填表的时间发生变化的 -->
+                                    <p class="forms_name" id="timeNow">Aug 05,2022</p>
+                                </div>
+
+                                <div class="date_create">
+                                    <p class="forms_name">Last exported:</p>
+                                </div>
+                            </div>
+                            <!-- 三个input的盒子 -->
+                            <div>
+                                <div>
+                                    <div class="date_create">
+                                        <div class="forms_name">Protocol Name:</div>
+                                        <div clas="forms_untitled">
+                                            <input type="text" placeholder="Untitled" >
+                                        </div>
+                                    </div>
+
+                                    <div class="date_create">
+                                        <div class="forms_name">Origanization/Author:</div>
+                                        <div clas="forms_untitled">
+                                            <input type="text" placeholder="Untitled" >
+                                        </div>
+                                    </div>
+
+
+                                    <div>
+                                        <div class="forms_name">Deacription:</div>
+                                        <div clas="forms_untitled">
+                                            <input type="text" placeholder="Untitled" >
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 按钮更新的内容会出现在header 的前面，又是技术盲区 -->
+                        <button type="button" class="filesidebar_button" class="updated">UPDATED</button>
+                    </form>
+                </div>
+
+                <!-- pipette的产品图,包括产品信息和两个按钮，而且产品的信息是根据上一页选择的移液枪进行变化的，是我的技术盲区 -->
+                <div class="pipettes">
+                    <div>Pipettes</div>
+                    <div>
+                        <div style="margin:20px 0px 10px 50px">
+                            <div>Left Pipette</div>
+                            <div id="lp">A</div>
+                        </div>
+
+                        <div style="margin:20px 0px 10px 50px">
+                            <div>Tip Rack</div>
+                            <div id="tr">B</div>
+                        </div>
+
+                    </div>
+                    
+
+                    <div>
+                        <!-- 这里点击之后可以重新选择...又是一个页面 -->
+                        <button class="filesidebar_button"
+                            style="background-color:#9e9e9e;border:none;color:white" ;>EDIT</button>
+                        <button class="filesidebar_button">SWAP</button>
+                    </div>
+                </div>
+
+                <!-- module产品图 -->
+                <div></div>
+
+                <!-- continue按钮 -->
+                <div class="nextBtn" >
+                    <!-- <div style="margin:5px 2px 0px 2px;display: inline-block;">
+                        <img src="../image/r.svg" width="20" height="20" >
+                    </div> -->
+                    
+                    <button id="cBtn" style="background:transparent;border:none;color:white"><a href="..\liquid\liquid.html" style="text-decoration:none;color:white">CONTINUE TO LIQUIDS</a></button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+   
+
+   
+
+       
+
+</body>
+
+
+</html>

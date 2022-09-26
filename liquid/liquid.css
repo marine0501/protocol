@@ -1,0 +1,344 @@
+      /* * 页面的基础设置，清除默认格式 */
+      */ body {
+          font-size: 16px;
+          line-height: 1;
+      }
+
+      * {
+          margin: 0;
+          padding: 0;
+          /* 内减模式 */
+          box-sizing: border-box;
+      }
+
+      /*清除默认格式*/
+      li {
+          list-style: none;
+      }
+
+      a {
+          text-decoration: none;
+      }
+
+      .clearfix::before,
+      .clearfix::after {
+          content: "";
+          display: table;
+      }
+
+      .clearfix::after {
+          clear: both;
+      }
+
+      * {
+          margin: 0px;
+          padding: 0px;
+          border: 0px
+      }
+
+      body,
+      div,
+      dl,
+      dt,
+      dd,
+      ul,
+      ol,
+      li,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      pre,
+      code,
+      form,
+      fieldset,
+      legend,
+      input,
+      textarea,
+      p,
+      blockquote,
+      th,
+      td,
+      hr,
+      button,
+      article,
+      aside,
+      details,
+      figcaption,
+      figure,
+      footer,
+      header,
+      hgroup,
+      menu,
+      nav,
+      section {
+          margin: 0;
+          padding: 0;
+      }
+
+
+
+      /* 页面设置 */
+      .protocol_design {
+          display: flex;
+      }
+
+      .bar {
+          width: 70px;
+          height: 860px;
+          background-color: #9e9e9e;
+      }
+
+      /* 导航栏的样式设置 */
+      /* 导航栏整体背景颜色和宽度设置 */
+      .bar {
+          background-color: #ffffff;
+          width: 70px;
+      }
+
+      /* svg图片所在盒子的设置 */
+      .navbox {
+          /*因为svg的图片空白区域不一样大，想要让它们对齐，需要给它们所在的盒子加居中*/
+          text-align: center;
+
+          width: 70px;
+          height: 90px;
+
+          border: 1px solid #9e9e9e;
+
+          display: block;
+          color: #4a4a4a;
+          font-size: .625rem;
+          font-weight: 600;
+          text-transform: uppercase;
+          text-align: center;
+
+          padding: 8px;
+
+      }
+
+      /* 图片与文字的距离 */
+      .picture {
+          margin-bottom: 8px;
+      }
+
+      /* 空白区域 */
+      .justForType {
+          width: 100%;
+          height: 360px;
+          background-color: #ffffff;
+          border-top: 1px solid #e5e2e2;
+          border-right: 1px solid #e5e2e2;
+          border-bottom: 1px solid #e5e2e2;
+      }
+
+
+      /* 液体 */
+
+      #information_input {
+        visibility: hidden;
+
+        width: 1300px;
+        height: 300px;
+        border: 1px solid #9e9e9e;
+        box-shadow: 1px 2px #9e9e9e;
+        margin: 10px auto;
+        padding: 16px;
+
+    }
+
+    .form_header {
+        font-weight: 700;
+        margin-bottom: 16px;
+
+    }
+
+    .liquidSet {
+        display: flex;
+        width: 1300px;
+        height: 70px;
+        margin-bottom: 30px;
+    }
+
+    .data_create {
+        margin-right: 60px;
+    }
+
+    .forms_name {
+        margin-bottom: 4px;
+    }
+
+    #liquidWrite {
+        width: 600px;
+        height: 30px;
+        background-color: #cdcdcd;
+        color: black;
+        border: none;
+
+    }
+
+    #des {
+        width: 600px;
+        height: 30px;
+        background-color: #cdcdcd;
+        color: black;
+        border: none;
+
+    }
+
+    #warning_Box {
+        width: 200px;
+        height: 24px;
+        color: rgb(232, 187, 103);
+        padding-left: 6px;
+        font-weight: 700;
+    }
+
+    #l_delete {
+        margin: 50px 540px 0px 0px;
+        width: 200px;
+        height: 30px;
+        background-color: white;
+        color: #9e9e9e;
+        border: 1px solid #9e9e9e;
+        text-align: center;
+        line-height: 30px;
+        font-size: 16px;
+    }
+
+    #l_cancel {
+        width: 200px;
+        height: 30px;
+        background-color: #4a4a4a;
+        color: white;
+        border: none;
+        text-align: center;
+        line-height: 30px;
+        font-size: 16px;
+
+    }
+
+    #l_save {
+        width: 200px;
+        height: 30px;
+        background-color: #9e9e9e;
+        color: black;
+        border: none;
+        text-align: center;
+        line-height: 30px;
+        font-size: 16px;
+        margin-left: 40px;
+
+    }
+
+    /* 根据液体新增的元素 */
+
+    #addbox {
+        width: 280px;
+        margin: 24px auto;
+    }
+
+
+    #liquidPage{
+        display: flex;
+    }
+    .liquid_side{
+        width: 300px;
+        height: 860px;
+        background-color: #f8f8f8;
+    }
+    
+    .ll{
+        width:300px;
+        height: 36px;
+        font-size: 18px;
+        font-weight: 700;
+        color: black;
+        text-align: center;
+        line-height: 36px;
+        padding-top: 14px;
+    }
+    
+    #liquid_btn{
+        width: 260px;
+        height: 36px;
+        background-color: #4a4a4a;
+        color:white;
+        
+        border: none;
+        border-radius: 2px;
+        text-align: center;
+        line-height: 36px;
+        margin:30px 20px;
+    
+    }
+    
+    .header_liquid{
+        width: 1340px;
+        height: 40px;
+        background-color: #4a4a4a;
+        color:white;
+        font-weight: 700;
+        padding-left:40px;
+        line-height: 40px;
+    }
+    .lp_content{
+        width: 1340px;
+        height: 800px;
+        background-color: white;
+        
+    }
+    
+    .texttitle{
+        width: 1340px;
+        text-align:center;
+        padding:16px;
+    
+    }
+    
+    .textsecond{
+        width: 1340px;          
+        text-align:center;
+        color:#686868;
+        padding:20px;
+       
+    
+    }
+    
+    .textthird{
+        width: 1340px;
+        
+        text-align:center;
+        color:#686868
+    }
+
+
+   #new_liquid{
+    width:280px;
+    background-Color:white;
+    border:1px solid #9e9e9e;
+    box-Shadow:1px 1px #9e9e9e;
+    margin:20px auto;
+    
+
+   }
+
+
+   #colorOfLiquid{ 
+    width:24px;
+    height: 24px;
+    border-radius: 24px;
+    margin: 4px auto;
+    
+   }
+
+   #nameOfliquid{ 
+    width: 280px;
+    height: 30px;
+    padding-left: 20px;
+    margin-top: 8px;
+    color: black;
+   }
+           

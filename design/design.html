@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="design.css">
+  
+
+  
+
+    <script>
+        // function liquidDoc(){
+        //     window.open("../liquid/liquid.html")
+        // }
+       
+        // function designDoc(){
+        //     window.close();
+        //     window.location.hash='liquid.html'
+        // }
+    </script>
+    
+    
+    
+</head>
+<body>
+    <div class="protocol_design">   
+        <div class="bar">
+
+            <div id="filebox" class="navbox">
+                <a href="..\index\index.html" >
+                    <image src="../image/file.svg" width="40" height="40" class="picture">
+                        <span>file</span>
+                </a>
+            </div>
+
+            <div id="liquidbox" class="navbox">
+                <a href="..\liquid\liquid.html">
+                    <image src="../image/liquid.svg" width="40" height="40" class="picture">
+
+                    <span>liquid</span> 
+                </a>
+               
+            </div>
+
+            <div id="designbox" class="navbox">
+                <a href="..\design\design.html">
+                    <image src="../image/design.svg" width="40" height="40" class="picture">
+                    <span>design</span>
+                </a>
+                
+            </div>
+
+            <div class="justForType"></div>
+
+            <div id="helpbox" class="navbox">
+                <image src="../image/help.svg" width="40" height="40" class="picture">
+
+                    <span>help</span>
+            </div>
+
+            <div id="settingbox" class="navbox">
+                <image src="../image/setting.svg" width="40" height="40" class="picture">
+                    <span>setting</span>
+            </div>
+        </div>
+
+
+         <!-- design detail page -->
+         <div id="designPage" class="design_detail">
+            <!-- protocol timeline -->
+            <div class="protocol_timeline">
+                <h2 class="design_sidepanel_title">Protocol Timeline</h2>
+                <div class="sidepanel_content">
+                    <div class="filesidebar">
+                        <!-- 这是操作的部分 -->
+                        <div>
+                            <button type="button" class="design_step">starting</button>
+                            <!-- <div id="mousenenu">
+                                <div id="transferDuplicate">Duplicate Step</div>
+                                <div id="transferdelete">Delete Step</div>
+                            </div> -->
+                            <div id="newElementForStep">
+                                <div id="newEleForTrans"></div>
+                                <div id="newElemForMix"></div>
+
+
+
+                            </div>
+                            <div class="sidepage">
+                                <div class="addstepbox" id="option1">
+                                    <div class="step" id="option_add_step">+ ADD STEP</div>
+
+                                    <ul class="stepList" id="option_text1_list1">
+                                        <div class="container">
+                                            <li class="stepOption" id="step_option_transfer">TRANSFER</li>
+                                            <!-- <div class="neirong"> transfer
+                                                </div> -->
+                                        </div>
+
+                                        <div class="container">
+                                            <li class="stepOption" id="stepForMix">MIX</li>
+                                            <!-- <div class="neirong"> mix
+                                                </div> -->
+                                        </div>
+
+                                        <div class="container">
+                                            <li class="stepOption" id="stepForPause">PAUSE</li>
+                                            <!-- <div class="neirong"> pause -->
+                                            <!-- </div> -->
+                                        </div>
+                                    </ul>
+                                </div>
+
+                            </div>
+
+                            <button type="button" class="design_step">final</button>
+                            <button id="export" type="button" class="design_step">export</button>
+
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+            <!-- wkb_box box -->
+            <div id="wkb_design">
+                <!-- one -->
+                <div id="pageForSetPlate">
+                    <!-- 标题 -->
+                    <div id="title">
+                        <span id="wkb_design_title" style="padding-left: 100px;"> | STARTING DECK STATE</span>
+
+
+                        <!-- W=微孔板设置时的标题 -->
+                        <div id="wkbNameset">
+                            <button id="deck"
+                                style="width:100px;height:40px;line-height:40px;background-color: #4a4a4a;color:white;font-size: 16px;font-weight: 700;padding-left: 30px;">DECK</button>
+                            <div id="rename"></div>
+                        </div>
+
+
+                    </div>
+
+                    <!-- 初始界面 -->
+                    <div id="bottomForIniPage">
+                        <!-- 微孔板操作界面 -->
+                          <!-- transfer -->
+                          <div id="desgin_transfer">
+                            <div style="font-size: 16px;border-bottom: 1px solid #e1e1e1;;">TRANSFER</div>
+
+                            <div style="display:flex;margin:20px 0">
+                                <div class="design_pipette" style="margin-right:8px;">
+                                    <div style="margin-right:8px">pipette:</div>
+                                    <select id="selectedPipette"
+                                        style="width:200px;height:20px;background:#e1e1e1;">
+                                    </select>
+                                </div>
+
+                                <div class="design_pipette">
+                                    <div style="margin-right:8px">volume per well:</div>
+                                    <input id="selectedVolumePerWell"
+                                        style="width:100px;height:20px;background:#e1e1e1;">
+                                    <!-- 这里的值需要做判断，是否大于微孔板中的值。超过则警告 -->
+                                </div>
+
+                            </div>
+                            <div style="display:flex;margin:20px 0">
+                                <div style="margin-right:240px">
+                                    <div
+                                        style="border-bottom:1px solid #e1e1e1;width:340px;margin-bottom:16px;height:26px;line-height: 26px;font-size: 16px;">
+                                        ASPIRATE</div>
+                                    <div style="display:flex;">
+                                        <div style="margin-right:8px">
+                                            <label for="wkbop"
+                                                style="width:180px;height:26px;line-height: 26px;display: block;">
+                                                source</label>
+                                            <!-- 这里的值应该是设定好的微孔板的name -->
+                                            <select id="transferFromThisPlate"
+                                                style="width:200px;height:20px;background:#e1e1e1;"></select>
+                                        </div>
+
+                                        <div>
+                                            <div style="width:180px;height:26px;line-height: 26px;">wells</div>
+                                            <!-- 这里的值应该是设定好的微孔板的数据 -->
+                                            <input id="source_well"
+                                                style="width:100px;height:20px;background:#e1e1e1;"
+                                                required="required" value="">
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div>
+                                    <div
+                                        style="border-bottom:1px solid #e1e1e1;width:340px;margin-bottom:16px;height:26px;line-height: 26px;font-size: 16px;">
+                                        DISPENSEE</div>
+                                    <div style="display:flex;">
+                                        <div style="margin-right:8px">
+                                            <div style="width:180px;height:26px;line-height: 26px;">destination
+                                            </div>
+                                            <select id="transferToThisPlate"
+                                                style="width:200px;height:20px;background:#e1e1e1;"> </select>
+                                        </div>
+
+                                        <div>
+                                            <div style="width:180px;height:26px;line-height: 26px;">wells</div>
+                                            <input id="destination_well"
+                                                style="width:100px;height:20px;background:#e1e1e1;" value="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div
+                                style="border-bottom:1px solid #e1e1e1;width:340px;margin-bottom:16px;height:26px;line-height: 26px;font-size: 16px;">
+                                STERILITY & MOTION</div>
+                            <div style="display:flex">
+                                <div style="margin-right:8px">
+                                    <div style="width:180px;height:26px;line-height: 26px;">change tip:</div>
+                                    <select id="way_trans" style="width:200px;height:20px;background:#e1e1e1;">
+                                        <option value="Before every aspirate">Before every aspirate</option>
+                                        <option value="Once at the start of step">Once at the start of step
+                                        </option>
+                                        <option value="Per source well">Per source well</option>
+                                        <option value="Per destination well">Per destination well</option>
+                                        <option value="Never">Never</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <div style="width:180px;height:26px;line-height: 26px;">Path:</div>
+                                    <img src="..\image\path_single_transfer.svg" id="st">
+                                    <img src="..\image\path_multi_aspirate.svg" id="ma">
+                                    <img src="..\image\path_multi_dispense.svg" id="md">
+                                </div>
+                            </div>
+
+                            <div>
+                                <div id="singeTransfer">Single Transfers
+                                    <img src="..\image\path_single.gif" id="gifOfsingeTransfer"
+                                        style="margin-top:6px;">
+                                </div>
+                                <div id="multiAspirate">Multi-Aspirate
+                                    <img src="..\image\path_multiAspirate.gif" id="gifOfmultiAspirate"
+                                        style="margin-top:6px;">
+                                    <div>Only compatible with Many-to-1 well ratios</div>
+                                </div>
+                                <div id="multiDispense">Multi-Dispense
+                                    <img src="..\image\path_multiDispense.gif" id="gifOfmultiDispense"
+                                        style="margin-top:6px;">
+                                    <div>Only compatible with 1-to-Many well ratios</div>
+                                </div>
+                            </div>
+
+                            <div style="margin:30px 0px 30px 16px;">
+                                <button id="deleteForTrans"
+                                    style="background:white;color:#4c4c4c;width:100px;height:40px;border:1px solid #9e9e9e">DELETE</button>
+                                <button id="notesForTrans"
+                                    style="background:white;color:#4c4c4c;width:100px;height:40px;border:1px solid #9e9e9e">NOTES</button>
+                                <button id="closeForTrans"
+                                    style="background:#343434;color:white;width:100px;height:40px;border:none;margin-left:500px;">CLOSE</button>
+                                <button id="saveForTrans"
+                                    style="background:#9e9e9e;color:#4c4c4c;width:100px;height:40px;border:none;">SAVE</button>
+                            </div>
+                        </div>
+                        <!-- mix -->
+                        <div id="pageForStepOfMix">
+                            <div style="font-size:14px;border-bottom:1px solid #9e9e9e;">MIX</div>
+                            <div style="margin:30px 0;">
+                                <div style="display:flex;">
+                                    <div style="margin-right: 8px;">
+                                        <div>pipette</div>
+                                        <select id="pipe_mix"
+                                            style="width:200px;height:20px;padding:2px;background:#e1e1e1;">
+                                        </select>
+                                    </div>
+
+                                    <div style="margin-right: 8px;">
+                                        <div>mix volume</div>
+                                        <input id="mixVolume"
+                                            style="width:100px;height:20px;background:#e1e1e1;">
+                                    </div>
+
+                                    <div style="margin-right: 8px;">
+                                        <div>repetitions</div>
+                                        <input id="repetitionForMix"
+                                            style="width:100px;height:20px;background:#e1e1e1;" value="">
+                                    </div>
+                                </div>
+
+                                <div style="display:flex;">
+                                    <div style="margin-right: 8px;">
+                                        <label for="wkbop" style="display: block;">
+                                            labware:</label>
+                                        <!-- 这里的值应该是设定好的微孔板的name -->
+                                        <select id="mixFromThisPlate"
+                                            style="width:200px;height:20px;background:#e1e1e1;"></select>
+
+                                    </div>
+                                    <div style="margin-right: 8px;">
+                                        <div>wells:</div>
+                                        <input id="chooseWellForMix"
+                                            style="width:100px;height:20px;background:#e1e1e1;" value="">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div style="display:flex;margin:30px 0;">
+                                <div
+                                    style="width:400px;margin-right:200px;font-size:14px;border-bottom:1px solid #9e9e9e;">
+                                    ASPIRATE</div>
+                                <div style="width:400px;font-size:14px;border-bottom:1px solid #9e9e9e;">
+                                    DISPENSE</div>
+                            </div>
+                            <div style="font-size:14px;border-bottom:1px solid #9e9e9e;margin:20px 0;">STERILITY
+                            </div>
+                            <div style="margin:30px 0;">
+                                <div style="width:180px;height:26px;line-height: 26px;">change tip:</div>
+                                <select id="wayMix" style="width:200px;height:20px;background:#e1e1e1;">
+                                    <option>Before every aspirate</option>
+                                    <option>Once at the start of step</option>
+                                    <option>Per source well</option>
+                                    <option>Per destination well</option>
+                                    <option>Never</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <button id="deleteForMix">DELETE</button>
+                                <button id="notesForMix">NOTES</button>
+                                <button id="closeForMix">CLOSE</button>
+                                <button id="saveForMix">SAVE</button>
+                            </div>
+
+                        </div>
+                        <!-- pause -->
+                        <div id="design_pause">
+                            <div style="width:800px;height:30px;line-height:30px;border-bottom:1px solid #9e9e9e;">PAUSE</div>
+
+                            
+                                <div class="pause_inf">
+                                    <div>
+                                        <div class="wayForPause">
+                                            <input type="radio" id="pauseUntilTold" name="howPause" value="pause until told to resume"
+                                                checked>
+                                            <label for="pause until told to resume">pause until told to resume</label>
+                                        </div>
+
+                                        <div class="wayForPause">
+                                            <div>
+                                                <input type="radio" id="pauseTimes" name="howPause" value="Daley for an amount of time">
+                                                <label for="Daley for an amount of time">Daley for an amount of time</label>
+                                            </div>
+
+                                            <div id ="set_pause_time" style="display:flex">
+                                                <div class="time_type" style="display:flex" >
+                                                    <input class="time" id="time_h">
+                                                    <span>h</span>
+                                                </div>
+
+                                                <div class="time_type" style="display:flex" >
+                                                    <input class="time" id="time_m">
+                                                    <span>m</span>
+                                                </div>
+
+                                                <div class="time_type" style="display:flex">
+                                                    <input class="time" id="time_s">
+                                                    <span>s</span>
+                                                </div> 
+                                            </div>
+                                           
+                                        </div>
+
+                                        <div class="wayForPause">
+                                            <input type="radio" id="pauseTemperature" name="howPause"
+                                                value="Pause until temperature reached">
+                                            <label for="Pause until temperature reached">pause until temperature reached</label>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="pause_message">
+                                        <p>Message to display:</p>
+                                        <input id="mess_to_display">
+                                    </div>
+                                </div>
+
+
+                                <!-- 按钮 -->
+                                <div>
+                                    <button style="background:white;color:#4c4c4c;width:100px;height:40px;border:1px solid #9e9e9e">DELETE</button>
+                                    <button style="background:white;color:#4c4c4c;width:100px;height:40px;border:1px solid #9e9e9e">NOTES</button>
+                                    <button style="background:#343434;color:white;width:100px;height:40px;border:none;margin-left:500px;">CLOSE</button>
+                                    <button id="btn_save_pause" style="background:#9e9e9e;color:#4c4c4c;width:100px;height:40px;border:none;">SAVE</button>
+                                </div>
+                          
+                        </div>
+
+
+                        <!-- plate -->
+                        <div id="wkb_container">
+                            <div id="wkb_box_one" class="wkb_box"></div>
+                            <div id="wkb_box_two" class="wkb_box"></div>
+                            <div id="wkb_box_three" class="wkb_box"></div>
+                            <br>
+                            <div id="wkb_box_four" class="wkb_box"></div>
+                            <div id="wkb_box_five" class="wkb_box"></div>
+                            <div id="wkb_box_six" class="wkb_box"></div>
+                        </div>
+
+                        <!-- 菜单栏，隐藏 -->
+                        <div id="wkbMenu" class="menebar">
+                            <div>Slot 8 Labware</div>
+                            <div>
+                                <div id="op_one">
+                                    <div class="op">TIP RACK</div>
+                                    <ul class="op_wkb" id="op_wkb_one">
+                                        <div>(retired)eppendorf epT.I.P.S.96 tip rack 1000μL</div>
+                                    </ul>
+                                </div>
+                                <div id="op_two">
+                                    <div class="op">TUBE RACK</div>
+                                    <ul class="op_wkb" id="op_wkb_two">
+                                        <div id="tenTube_falcon_double">opentrons 10 tube rack with falcon 4*50 mL,
+                                            6*15
+                                            mL conical</div>
+                                        <div>(retired)opentrons 10 tube rack(acrylic) with falcon 4*50 mL, 6*15 mL
+                                            conical</div>
+                                        <div>opentrons 10 tube rack with NEST 4*50 mL, 6*15 mL conical</div>
+                                        <div id="fftube_falcon_15">opentrons 15 tube rack with falcon 15 mL conical
+                                        </div>
+                                        <div>opentrons 15 tube rack with NEST 15 mL conical</div>
+
+                                    </ul>
+                                </div>
+
+                                <div id="op_three">
+                                    <div class="op">WELL PLATE</div>
+                                    <ul class="op_wkb" id="op_wkb_three">
+                                        <div>bio-rad 96 well plate 200 μL PCR</div>
+                                        <div>corning 12 well plate 6.9 mL flat</div>
+                                        <div>corning 24 well plate 3.4 mL flat</div>
+                                        <div>corning 384 well plate 112 μL flat</div>
+                                        <div>corning 48 well plate 1.6 mL flat</div>
+
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <div class="op">RESERVOIR</div>
+                                </div>
+
+                                <div>
+                                    <div class="op">ALUMINUM BLOCK</div>
+                                </div>
+
+
+                            </div>
+
+                            <button id="op_upload">UPLOAD CUSTOM LABWARE</button>
+                            <div>Access the Labware Creator <a href="">here</a></div>
+                            <button id="op_close">CLOSE</button>
+
+                        </div>
+                    </div>
+
+                    <!-- 打开微孔板后的界面 -->
+                    <div id="bottomForSetplate">
+                        <!-- 点击cir后，出现的微孔板设置面板 -->
+                        <div id="wkbSet">
+                            <!-- 输入 -->
+                            <div class="sr">
+                                <!-- liquid -->
+                                <div class="sr_liquid">
+                                    <div>Liquid:</div>
+                                    <!-- 在这里要加入新增的液体 -->
+                                    <select id="liquid_desion"></select>
+                                </div>
+                                <!-- volume -->
+                                <div class="sr_volume">
+                                    <div>Volume:</div>
+                                    <input id="volume_desion">
+                                </div>
+                            </div>
+                            <!-- 按钮 -->
+                            <div class="sr">
+                                <div id="clear">CLEAR WELLS</div>
+                                <div id="cancel">CANCEL</div>
+                                <div id="wkbSave">SAVE</div>
+
+                            </div>
+                        </div>
+                        <!-- black bgc -->
+                        <div id="bBGC">
+                            <div id="wBGC">
+                                <div id="divForAppendCirboxOne"></div>
+                                <div id="divForAppendCirboxTwo"></div>
+                                <div id="divForAppendCirboxThree"></div>
+                                <div id="divForAppendCirboxFour"></div>
+                                <div id="divForAppendCirboxFive"></div>
+                                <div id="divForAppendCirboxSix"></div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- two z-index=2 -->
+                    <div id="pageForChooseWell">
+                        <!-- title -->
+                        <div id="WellHeader">
+                            <!-- source well back -->
+                            <div id="backFromSourceWell">
+                                <button id="sourceback">BACK</button>
+                                <span>transfer 1</span>
+                            </div>
+                            <!-- destination well back -->
+                            <div id="backFromDestinationWell">
+                                <button id="deatinationback">BACK</button>
+                                <span>transfer 2</span>
+                            </div>
+                            <!-- mix well back -->
+                            <div id="backFormMix">
+                                <button id="mixback">BACK</button>
+                                <span>mix</span>
+                            </div>
+
+                        </div> 
+                        <!-- bottom -->
+                        <div id="bottomForChooseWell">
+                            <div id="pipetteInf">pipette</div>
+                            <button id="saveWell">SAVE SELECTION</button>
+                            <div id="forPlate">
+                                <div id="divForOne"></div>
+                                <div id="divForTwo"></div>
+                                <div id="divForThree"></div>
+                                <div id="divForFour"></div>
+                                <div id="divForFive"></div>
+                                <div id="divForSix"></div>
+                            </div>
+                        </div>
+                   </div>
+                 </div>  
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+</body>
+<script type="text/javascript" src="design.js"  async></script>
+<!-- <script type="text/javascript" src="..\index\index.js"  async></script> -->
+<script type="text/javascript" src="..\liquid\liquid.js"  async></script> 
+
+</html>

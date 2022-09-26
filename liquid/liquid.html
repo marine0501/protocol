@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="liquid.css">
+    
+
+    
+    
+    
+</head>
+<body>
+    <div class="protocol_design">
+        <div class="bar">
+
+            <div id="filebox" class="navbox">
+                <a href="..\index\index.html">
+                    <image src="../image/file.svg" width="40" height="40" class="picture">
+                        <span>file</span>
+                </a>
+            </div>
+
+            <div id="liquidbox" class="navbox">
+                <a href="..\liquid\liquid.html">
+                    <image src="../image/liquid.svg" width="40" height="40" class="picture">
+
+                    <span>liquid</span> 
+                </a>
+               
+            </div>
+
+            <div id="designbox" class="navbox">
+                <a href="..\design\design.html">
+                    <image src="../image/design.svg" width="40" height="40" class="picture">
+                    <span>design</span>
+                </a>
+                
+            </div>
+
+            <div class="justForType"></div>
+
+            <div id="helpbox" class="navbox">
+                <a>
+                    <image src="../image/help.svg" width="40" height="40" class="picture">
+
+                        <span>help</span>
+                </a>
+                
+            </div>
+
+            <div id="settingbox" class="navbox">
+                <image src="../image/setting.svg" width="40" height="40" class="picture">
+                    <span>setting</span>
+            </div>
+        </div>
+
+          <!-- liquid page -->
+          <div id="liquidPage">
+
+            <div class="liquid_side">
+                <div class="ll">Liquids</div>
+                <div id="addbox"></div>
+                <button id="liquid_btn">NEW LIQUIDS</button>
+            </div>
+
+            <!-- remove掉 -->
+            <div id="liquid_right">
+                <header class="header_liquid">
+                    <div class="header_title">LIQUIDS</div>
+                </header>
+
+                <div id="lp_content">
+                    <h2 class="texttitle">Define your liquids</h2>
+                    <div class="textsecond">This is your inventory of the reagents and samples your protocol
+                        uses. Use the New Liquid
+                        <br> button in the sidebar to start defining liquids.
+                    </div>
+                    <div class="textthird">After you've added your liquids, continue to the tab
+                        <br>where you can
+                        specify where labware and liquids start
+                        on your deck.
+                    </div>
+
+                </div>
+
+                <div id="information_input">
+                    <div class="form_header">Details</div>
+
+                    <div class="liquidSet">
+                        <div class="data_create">
+                            <div class="forms_name">Liquid Name:</div>
+                            <div>
+                                <input id="liquidWrite" type="text" value="">
+                            </div>
+                            <div id="warning_Box">
+                                <p>Liquid name is required</p>
+                            </div>
+                        </div>
+
+                        <div class="data_create">
+                            <div class="forms_name">Description:</div>
+                            <div>
+                                <input id="des" type="text">
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <section>
+                        <div>Serialization</div>
+                        <p>Each placement of the liquid will get its own number. ("Sample 1", "Sample 2",
+                            "Sample 3")</p>
+                        <label></label>
+                    </section>
+
+                    <button id="l_delete">DELETE</button>
+                    <button id="l_cancel">CANCEL</button>
+                    <button id="l_save">SAVE</button>
+
+
+
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </div>
+        
+</body>
+<script type="text/javascript" src="liquid.js"  async></script>
+<!-- <script type="text/javascript" src="..\index\index.js"  async></script> -->
+<script type="text/javascript" src="..\design\design.js"  async></script> 
+</html>
+
+
+

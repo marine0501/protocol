@@ -1,0 +1,932 @@
+ /* * 页面的基础设置，清除默认格式 */
+ */ body {
+    font-size: 16px;
+    line-height: 1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    /* 内减模式 */
+    box-sizing: border-box;
+}
+
+/*清除默认格式*/
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.clearfix::before,
+.clearfix::after {
+    content: "";
+    display: table;
+}
+
+.clearfix::after {
+    clear: both;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    border: 0px
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+hr,
+button,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* 页面设置 */
+.protocol_design {
+    display: flex;
+}
+
+.bar {
+    width: 70px;
+    height: 860px;
+    background-color: #9e9e9e;
+}
+
+/* 导航栏的样式设置 */
+/* 导航栏整体背景颜色和宽度设置 */
+.bar {
+    background-color: #ffffff;
+    width: 70px;
+}
+
+/* svg图片所在盒子的设置 */
+.navbox {
+    /*因为svg的图片空白区域不一样大，想要让它们对齐，需要给它们所在的盒子加居中*/
+    text-align: center;
+
+    width: 70px;
+    height: 90px;
+
+    border: 1px solid #9e9e9e;
+
+    display: block;
+    color: #4a4a4a;
+    font-size: .625rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+
+    padding: 8px;
+
+}
+
+/* 图片与文字的距离 */
+.picture {
+    margin-bottom: 8px;
+}
+
+/* 空白区域 */
+.justForType {
+    width: 100%;
+    height: 360px;
+    background-color: #ffffff;
+    border-top: 1px solid #e5e2e2;
+    border-right: 1px solid #e5e2e2;
+    border-bottom: 1px solid #e5e2e2;
+}
+
+
+  /* design界面的样式 */
+  #pageForSetPlate {
+    position: absolute;
+    left: 366px;
+    top: 0;
+
+    width: 1340px;
+    height: 860px;
+}
+
+#pageForChooseWell {
+    /* 为了测试，最后要删除 */
+    /* display: none;      */
+
+    position: absolute;
+    left: 0px;
+    top: 0;
+    /* 该页面存在，但是位于最底下。点击操作步骤中的well选择时，浮动到最上层。 */
+    z-index: -1;
+
+    width: 1340px;
+    height: 860px;
+
+}
+
+#WellHeader {
+    width: 1340px;
+    height: 40px;
+    background-color: #4a4a4a;
+    color: white;
+    line-height: 40px;
+    /* 在不增加盒子的情况下，控制文字的位置 */
+    padding-left: 100px;
+
+}
+
+#bottomForChooseWell {
+    
+    position: absolute;
+    width: 1340px;
+    height: 820px;
+    background-color: black;
+    /* opacity: 90%; */
+}
+
+#pipetteInf {
+    position: relative;
+    left: 200px;
+    top: 76px;
+    color: white;
+}
+
+
+
+#saveWell {
+    position: relative;
+    left: 800px;
+    top: 60px;
+
+    width: 160px;
+    height: 30px;
+    border: 1px solid white;
+    background-color: black;
+    opacity: 90%;
+
+    font-size: 14px;
+    line-height: 30px;
+    color: white;
+
+}
+
+#forPlate {
+    position: relative;
+    left: 200px;
+    top: 100px;
+
+
+    background-color: white;
+    width: 800px;
+    height: 500px;
+    border-radius: 30px;
+
+}
+
+#title {
+    width: 1340px;
+    height: 40px;
+    background-color: #4a4a4a;
+}
+
+#bottomForSetplate {
+    display: none;
+}
+
+#bBGC {
+
+    position: relative;
+    width: 1340px;
+    height: 840px;
+    background-color: black;
+
+}
+
+#wBGC {
+    position: absolute;
+    left: 300px;
+    top: 80px;
+    width: 800px;
+    height: 500px;
+    background-color: white;
+    border-radius: 30px;
+}
+
+.bigboxfornewelement {
+    width: 280px;
+    background-color: white;
+    margin: 20px auto;
+    border: 1px solid #9e9e9e;
+    border-bottom: none;
+
+
+    margin-bottom: 0px;
+}
+
+.blockStep {
+    width: 280px;
+    height: 280px;
+    border: 1px solid #9e9e9e;
+    box-shadow: 1px 2px #9e9e9e;
+    background-color: white;
+    margin: 20px auto;
+}
+
+.mixStep {
+    width: 280px;
+    height: 280px;
+    border: 1px solid #9e9e9e;
+    box-shadow: 1px 2px #9e9e9e;
+    background-color: red;
+    margin: 20px auto;
+
+}
+
+#ooc_transfer {
+    width: 280px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    padding: 6px 20px;
+
+}
+
+.text_transfer {
+    font-size: 16px;
+    padding-left: 10px;
+    padding-right: 140px;
+    text-transform: uppercase
+}
+
+#ooc_c_transfer {}
+
+.whichplate {
+    display: flex;
+    text-transform: uppercase;
+    padding: 6px 20px;
+}
+
+.aspirate_transfer {
+    width: 100px;
+    height: 54px;
+    margin-right: 20px;
+
+
+}
+
+.arrow {
+    width: 80px;
+}
+
+#trans_as {
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.dispense_trans {
+    width: 100px;
+    height: 54px;
+
+}
+
+#trans_dis {
+    font-weight: 700;
+    font-size: 14px;
+
+}
+
+.trans_detail {
+    display: flex;
+    width: 280px;
+    height: 30px;
+    border: 1px solid #9e9e9e;
+    background-color: white;
+    margin: 0 auto;
+    border: 1px solid #9e9e9e;
+    line-height: 30px;
+    
+}
+
+#show_liquid {
+    width: 60px;
+    height: 20px;
+    font-size: 14px;
+    font-weight: 700;
+    color: black;
+    border-radius: 15px;
+    margin-right: 8px;
+    margin-left: 20px;
+    text-align: center;
+    line-height: 20px;
+
+}
+
+#as_well {
+    width: 30px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    margin-right: 14px;
+    font-size: 14px;
+
+}
+
+#trans_volume {
+    width: 30px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    margin-right: 38px;
+    font-size: 14px;
+
+}
+
+#dis_well {
+    width: 30px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+
+/* mix 可视化元素的样式 */
+#newMix {
+    width: 280px;
+    border: 1px solid #9e9e9e;
+    background-color: white;
+    margin: 20px auto;
+    margin-bottom: 0px;
+
+
+}
+
+#show_mix {
+    width: 280px;
+    height: 40px;
+    padding-left: 20px;
+
+}
+
+#repe_mix {
+    width: 280px;
+
+}
+
+#detail_mix {
+    width: 280px;
+    height: 30px;
+    line-height: 20px;
+    font-size: 14px;
+    padding: 10px 20px;
+    /* border: 1px solid #9e9e9e; */
+}
+
+#each_mix {
+    width: 280px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    padding: 10px 20px;
+    border: 1px solid #9e9e9e;
+    background-color: white;
+    margin: 0px auto;
+
+    /* border: 1px solid #9e9e9e; */
+
+}
+
+#mix_plate {
+    margin-right: 70px;
+}
+
+#mix_volume {
+    margin-right: 60px;
+}
+
+
+#mix_liquid {
+    margin-right: 20px;
+}
+
+#mix_begin_well {
+    margin-right: 20px;
+}
+
+#mix_volume {
+    margin-right: 20px;
+}
+
+
+/* header */
+#backFromSourceWell {
+    display: none;
+
+}
+
+#backFromDestinationWell {
+    display: none;
+}
+
+#backFormMix {
+    display: none;
+}
+
+/* pause  */
+
+#design_pause{ 
+    display: none;
+    width:1338px;
+    background-color: white;
+    border: 1px solid #9e9e9e;
+    box-shadow: 1px 2px #9e9e9e;
+    padding:20px 20px;
+    margin:0px 1px;
+}
+
+.pause_inf{ 
+    display: flex;
+
+
+}
+
+.wayForPause{ 
+    margin:16px 0px;
+}
+
+#set_pause_time{ 
+    margin:16px 0;
+    
+}
+
+.time_type{ 
+    width:90px;
+    height: 20px;
+    background-color: #e1e1e1;
+    margin-right: 10px;
+    border-radius: 5px 5px;
+    
+    
+}
+
+
+.time{ 
+    width: 70px;
+    height: 20px;
+    border:none;
+    background-color: #e1e1e1;
+    margin-right: 4px;
+    outline:none;
+    padding-left: 10px;
+    line-height: 20px;
+    border-radius: 5px 5px;
+}
+
+/* add step */
+
+.protocol_timeline {
+    width: 300px;
+    height: 860px;
+    background-color: rgb(250, 250, 250);
+}
+
+.design_sidepanel_title {
+    width: 300px;
+    height: 50px;
+    padding: 16px auto;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+}
+
+.design_step {
+    width: 280px;
+    height: 36px;
+    font-size: 16px;
+    line-height: 36px;
+    border: 1px solid #9e9e9e;
+    box-shadow: 1px 2px #9e9e9e;
+    background-color: white;
+    margin: 10px 10px 20px 10px;
+}
+
+#option_add_step {
+    width: 240px;
+    height: 36px;
+    background-color: #4a4a4a;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    line-height: 36px;
+    border: none;
+    margin: 0 auto;
+
+}
+
+.stepOption {
+    width: 240px;
+    height: 30px;
+    font-size: 14px;
+    background-color: #525252;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    margin: 0 auto;
+
+}
+
+
+
+.design_detail {
+    /* 元素横向排列 */
+    display: flex;
+}
+
+.protocol_timeline {
+    width: 300px;
+    height: 860px;
+    background-color: rgb(233, 230, 230);
+}
+
+#wkb_design {
+    
+    width: 1340px;
+    height: 860px;
+    background-color: white;
+}
+
+
+
+#wkb_design_title {
+    width: 1340px;
+    height: 40px;
+    background-color: #4a4a4a;
+    color: white;
+    line-height: 40px;
+    /* 在不增加盒子的情况下，控制文字的位置 */
+    padding-left: 100px;
+}
+
+#wkbNameset{
+    display: none;
+    width: 1340px;
+    height: 40px;
+    background-color: #4a4a4a;
+    color: white;
+    line-height: 40px;
+  
+    
+
+}
+
+
+#wkb_container {
+    /* 子元素可以并列显示 */
+    display: flex;
+    /* 自动换行 */
+    flex-wrap: wrap;
+
+    width: 1000px;
+    height: 600px;
+    border: 1px solid pink;
+
+    margin: 80px auto 0px auto;
+
+}
+
+
+
+.wkb_box {
+    position: relative;
+
+    width: 200px;
+    height: 200px;
+    border: 1px solid #9e9e9e;
+    border-radius: 20px;
+    box-shadow: 1px 2px #9e9e9e;
+    /* box之间的距离 */
+    margin-left: 100px;
+    margin-top: 40px;
+
+}
+
+
+
+#wkbMenu {
+    display: none;
+}
+
+.menebar {
+    /* 定位，不确定后面设置子元素的位置时，是否会有问题 */
+    /* 相对于wkb_design */
+    position: relative;
+    left: 400px;
+    top: -500px;
+
+    width: 500px;
+    border: 1px solid #9e9e9e;
+    box-shadow: 1px 2px #9e9e9e;
+    background-color: white;
+
+    padding-left: 20px;
+    padding-top: 20px;
+    font-size: 16px;
+}
+
+.op {
+    width: 460px;
+    border: 1px solid #9e9e9e;
+    box-shadow: 1px 1px #9e9e9e;
+
+    font-size: 15px;
+    padding: 4px 0px 4px 10px;
+    margin-bottom: 4px;
+
+}
+
+#op_one {
+    /* 与 title 隔开 */
+    margin-top: 10px;
+}
+
+.op_wkb {
+    width: 460px;
+    font-size: 14px;
+    padding-left: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: none;
+}
+
+#op_upload {
+    width: 462px;
+    height: 30px;
+    margin: 14px auto;
+
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+    font-weight: 700;
+    text-align: center;
+    line-height: 30px;
+}
+
+#op_close {
+    width: 220px;
+    height: 30px;
+    margin: 30px 240px;
+
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+    font-weight: 700;
+    text-align: center;
+    line-height: 30px;
+
+}
+
+/* 微孔板设置 */
+#wkbSet {
+    display: none;
+
+    width: 1340px;
+    height: 240px;
+    background-color: white;
+    border: 1px solid #9e9e9e;
+
+}
+
+.sr {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px 0px 60px 10px;
+
+}
+
+#clear {
+    width: 300px;
+    height: 36px;
+    border: 1px solid #9e9e9e;
+    color: #9e9e9e;
+    font-size: 14px;
+    text-align: center;
+    line-height: 36px;
+}
+
+#cancel {
+    width: 300px;
+    height: 36px;
+    border: 1px solid black;
+    color: black;
+    font-size: 14px;
+    text-align: center;
+    line-height: 36px;
+    margin-left: 360px;
+    margin-right: 60px;
+
+}
+
+#wkbSave {
+    width: 300px;
+    height: 36px;
+    background-color: #4a4a4a;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 36px;
+
+}
+
+.sr_volume {
+    width: 260px;
+    height: 70px;
+    font-size: 14px;
+    margin-left: 400px;
+}
+
+#liquid_desion {
+    width: 260px;
+    height: 30px;
+    background-color: #c8c5c5;
+    border: none;
+    margin-top: 4px;
+}
+
+#volume_desion {
+    width: 260px;
+    height: 30px;
+    background-color: #c8c5c5;
+    border: none;
+    margin-top: 4px;
+
+}
+
+
+#desgin_transfer {
+    display: none;
+    width: 1340px;
+    height: 420px;
+    background-color: white;
+    border: 1px solid #e1e1e1;
+    box-shadow: 1px 1px #e1e1e1;
+    margin: 0 auto;
+    padding: 20px;
+
+}
+
+
+ /* mix */
+ #pageForStepOfMix {
+    display: none;
+    width: 1338px;
+    height: 400px;
+    border: 1px solid #e1e1e1;
+    box-shadow: 1px 2px #e1e1e1;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#deleteForMix {
+    width: 100px;
+    height: 26px;
+    border: 1px solid #343434;
+    color: #343434;
+    background-color: white;
+    margin-right: 8px;
+
+}
+
+#notesForMix {
+    width: 100px;
+    height: 26px;
+    border: 1px solid #343434;
+    color: #343434;
+    background-color: white;
+    margin-right: 500px;
+}
+
+#closeForMix {
+    width: 100px;
+    height: 26px;
+    color: white;
+    background-color: #343434;
+    margin-right: 8px;
+}
+
+#saveForMix {
+    width: 100px;
+    height: 26px;
+    color: white;
+    background-color: #343434;
+}
+
+
+ /* gif */
+
+ #singeTransfer {
+    display: none;
+    position: absolute;
+    left: 0px;
+    top: 380px;
+
+    z-index: 2;
+    width: 560px;
+    height: 200px;
+    background: #4a4a4a;
+    text-align: center;
+    color: white;
+    padding: 6px;
+}
+
+
+#multiAspirate {
+    display: none;
+    position: absolute;
+    left: 0px;
+    top: 380px;
+    z-index: 2;
+    width: 560px;
+    height: 210px;
+    background: #4a4a4a;
+    text-align: center;
+    color: white;
+    padding: 6px;
+
+}
+
+#multiDispense {
+    display: none;
+    position: absolute;
+    left: 70px;
+    top: 380px;
+    z-index: 2;
+    width: 560px;
+    height: 210px;
+    background: #4a4a4a;
+    text-align: center;
+    color: white;
+    padding: 6px;
+
+}
+
+
+.sidepage{ 
+    margin-top:20px;
+}
+
+/* pause */
+
+.pp{ 
+    width: 280px;
+    border: 1px solid #9e9e9e;
+    background-color: white;
+    margin: 20px auto;
+    padding-left:10px;
+}
+
+
+#mess_to_display{ 
+    width:200px;
+    height: 50px;
+    background-color: #e1e1e1;
+    margin:20px;
+    padding-left: 6px 12px;
+}

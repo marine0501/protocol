@@ -1,0 +1,407 @@
+/* * 页面的基础设置，清除默认格式 */
+*/ body {
+    font-size: 16px;
+    line-height: 1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    /* 内减模式 */
+    box-sizing: border-box;
+}
+
+/*清除默认格式*/
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.clearfix::before,
+.clearfix::after {
+    content: "";
+    display: table;
+}
+
+.clearfix::after {
+    clear: both;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    border: 0px
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+hr,
+button,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* 页面设置 */
+.protocol_design {
+    display: flex;
+}
+
+.bar {
+    width: 70px;
+    height: 860px;
+    background-color: #9e9e9e;
+}
+
+/* 导航栏的样式设置 */
+/* 导航栏整体背景颜色和宽度设置 */
+.bar {
+    background-color: #ffffff;
+    width: 70px;
+}
+
+/* svg图片所在盒子的设置 */
+.navbox {
+    /*因为svg的图片空白区域不一样大，想要让它们对齐，需要给它们所在的盒子加居中*/
+    text-align: center;
+
+    width: 70px;
+    height: 90px;
+
+    border: 1px solid #9e9e9e;
+
+    display: block;
+    color: #4a4a4a;
+    font-size: .625rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+
+    padding: 8px;
+
+}
+
+/* 图片与文字的距离 */
+.picture {
+    margin-bottom: 8px;
+}
+
+/* 空白区域 */
+.justForType {
+    width: 100%;
+    height: 360px;
+    background-color: #ffffff;
+    border-top: 1px solid #e5e2e2;
+    border-right: 1px solid #e5e2e2;
+    border-bottom: 1px solid #e5e2e2;
+}
+
+
+/* 中间部分，在file状态时的页面样式 */
+.sidepanel {
+    background-color: #fafafa;
+    width: 350px;
+    height: 860px;
+}
+
+/* protocol file所在盒子 样式设置 */
+.sidepanel_titlebar {
+    display: flex;
+    align-items: center;
+    width: 18.25rem;
+    /* 下面是原网站的样式设置，这里用到的可能是切换类来切换显示的title */
+    /* width: var(--sidebar-width); */
+}
+
+.sidepanel_title {
+    font-size: 1.125rem;
+    /* font-size: var(--fs-header); */
+    font-weight: 600;
+    /* font-weight: var(--fw-semibold); */
+    color: #4a4a4a;
+    margin: 16px auto;
+}
+
+/* protocol file 按钮的设置 */
+
+.filesidebar_button {
+    /* display: block; */
+    /* 相对定位，让按钮在居中的位置。但其实我这里是肉眼看出来的一个数值，不准确 */
+    position: relative;
+    left: 50px;
+    line-height: 1.4;
+    width: 150px;
+    height: 40px;
+    border: 1px solid #484848;
+    border-radius: 2px;
+    padding: 0.5rem;
+    margin: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    /* 鼠标悬停时，鼠标样式为小手 */
+    cursor: pointer;
+    /* 原网站这里按钮会随着鼠标点击变颜色 */
+    color: #4a4a4a;
+    background: transparent;
+    
+}
+
+/* 右侧部分整体盒子的设置 */
+.protocoleditor_mainpage {
+    width: 100%;
+    background-color: #ffffff;
+}
+
+/* 标题所在盒子 */
+
+.header_right {
+    /* 居中对齐 */
+    display: flex;
+    align-items: center;
+
+    width:1400px;
+    height: 50px;
+    text-transform: uppercase;
+    background-color: #4a4a4a;
+}
+
+.header_wrapper {
+    display: flex;
+    /*子元素水平+垂直居中*/
+    justify-content: center;
+    align-items: center;
+}
+
+.header_title {
+    /* display:inline-block; */
+    width: 300px;
+    color: #ffffff;
+    font-size: 18px;
+    text-align: center;
+    line-height: 30px;
+    margin-right: -10px;
+}
+
+.header_subtitle {
+    /* display: block; */
+    width: 60px;
+    height: 30px;
+    background-color: #9b9b9b;
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: lighter;
+    /*水平居中+垂直居中*/
+    text-align: center;
+    /* line-height等于盒子高度，实现垂直居中 */
+    line-height: 30px;
+
+}
+
+/* 右侧部分，点击CREATE NEW后出现的页面 */
+/* 触发后才会出现页面 */
+#windowBackground1 {
+    /*在触发前不出现，关键在于display：none;*/
+    display: none;
+    width: 100%;
+    height: 770px;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* 触发后页面中央的表格 */
+.form {
+    /* 是表格出现在中央位置，又是我肉眼调的不精准位置 */
+    position: absolute;
+    left: 700px;
+
+    width: 600px;
+    height: 700px;
+    border: 1px solid black;
+    /* box-sizing: border-box; */
+    margin: 40px;
+    background-color: white;
+}
+
+/* 标题盒子的位置，向下，向右移动 */
+/* 一共三个盒子，每个盒子距离左侧都是16px   */
+.form_header {
+    margin: 16px 0px 32px 16px;
+    
+}
+
+/* 标题文字的设置 */
+.form_header_title {
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #4a4a4a;
+}
+
+.forms_name {
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #4a4a4a;
+    text-transform: capitalize;
+}
+
+
+
+.form_header_setup {
+    margin: 16px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #4a4a4a;
+}
+
+.left {
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #4a4a4a;
+}
+
+.left_pipette {
+    margin-bottom: 10px;
+}
+
+
+.pipettesetup_left {
+    margin-left: 16px;
+}
+
+/* cancel,save按钮设置 */
+
+.module_button_row {
+    /* 从主轴右对齐 */
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+
+.module_button_row_under{
+
+    font-size: 16px;
+    background-color: transparent;
+    padding:10px 50px;
+    border:1px solid #9e9e9e;
+    cursor: pointer;   
+    margin:50px 20px;
+}
+
+/* 鼠标悬停时颜色改变 */
+.module_button_row_under:hover {
+    background-color: #f6f5f5;
+}
+
+#windowBackground2 {
+    /*在触发前弹窗不出现，关键在于display：none;*/
+    display: none;
+    width: 100%;
+    background-color:white;
+}
+#windowBackground3 {
+    /*在触发前弹窗不出现，关键在于display：none;*/
+    display: none;
+    width: 100%;
+    background-color:white;
+}
+
+.pageBottom{
+    
+    width:100%;
+    height:760px;
+    border: 1px solid red;
+}
+
+/* information部分的样式设置 */
+.information{
+    margin:20px 30px 20px 20px;
+
+    width: 1300px;
+    border:1px solid #e5e2e2;
+    box-shadow: 1px 1px #9e9e9e;
+}
+
+.pipettes{
+    margin:20px 30px 20px 20px;
+
+    width: 1300px;
+    height:200px;
+    border:1px solid #e5e2e2;
+    box-shadow: 1px 1px #9e9e9e;
+   
+}
+
+.nextBtn{
+    margin:20px 30px 20px 1000px;
+    
+    width:250px;
+    height:40px;
+
+    background-color:#4a4a4a;
+    color:white;
+    text-align: center;
+    line-height: 40px;
+   
+}
+
+.updated{
+    float:right;
+    right:20px;
+}
+
+ 
+/* 让距离左边的位置都为16px */
+.information_input{
+    /* margin-left: 16px; */
+
+}
+/* 我想要它们在同一行，设置了行内块，但依然是两行。没处理 */
+.date_create{
+    display: inline-block;
+    width: 100px;
+  
+}
